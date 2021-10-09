@@ -1,0 +1,1 @@
+cd /media/math/DATA/ProteinPrediction/RoseTTAFold; ./run_pyrosetta_ver.sh /home/math/DATA/RoseTTAFold/running/test.fa /home/math/DATA/RoseTTAFold/running
