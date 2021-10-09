@@ -1,6 +1,6 @@
 # rosettafold-local-server
 
-It is a local server of rosettafold based on python.
+It is a simple local server of rosettafold based on python.
 
 ## Requirement:
 
