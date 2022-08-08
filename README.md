@@ -4,7 +4,7 @@ It is a simple local server of RoseTTAFold based on python and ubuntu 20.04.
 
 # Screenshot
 
-![Figure](Screenshot.png)
+![Screenshot](Figure/Screenshot.png)
 
 ## Requirement:
 
