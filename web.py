@@ -10,7 +10,8 @@ name=''
 s = 'acdefghiklmnopqrstuvwyACDEFGHIKLMNOPQRSTUVWX'
 
 # 匹配不是中文、大小写、数字的其他字符
-cop = re.compile("[^a-z^A-Z]")
+cop = re.compile("[^a^c-i^k-n^p-t^v^w^y^A^C-I^K-N^P-T^V^W^Y]")
+
 #r = random.choice(s) #获取随机字母
 #for i in range(10):
 #    name = name + random.choice(s)  #生成十位的随机字母
