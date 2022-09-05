@@ -21,17 +21,17 @@ while True:
 while True:
     time.sleep(30) #时间间隔，单位是秒，每隔30秒运行一次
 
-    apply=pd.read_csv("/home/math/DATA/RoseTTAFold/apply.csv")  #申请文件，所有申请而没有运行的数据都保存在这里
-    result=pd.read_csv("/home/math/DATA/RoseTTAFold/result.csv") #结果文件
+    apply=pd.read_csv("/home/math/DATA/RoseTTAFold/apply.csv")    # your apply list here 申请文件，所有申请而没有运行的数据都保存在这里
+    result=pd.read_csv("/home/math/DATA/RoseTTAFold/result.csv")  # your result list here 结果文件
 
     #判定是否删除运行指示器并且对文件进行压缩处理
-    if os.path.exists("/home/math/DATA/RoseTTAFold/running/model/model_1.pdb") == True:
+    if os.path.exists("/home/math/DATA/RoseTTAFold/running/model/model_1.pdb") == True:     # check if it is running
         
         #apply=pd.read_csv("/Users/liufei/Desktop/test.csv")  #申请文件，所有申请而没有运行的数据都保存在这里
 
         tar_filename=str(apply.values.tolist()[0][1])+".tar.gz"
-        resultpath=r"/home/math/DATA/RoseTTAFold/"+tar_filename
-        targetpath=r"/media/math/DATA/RESULT/RoseTTAFold/"+tar_filename
+        resultpath=r"/home/math/DATA/RoseTTAFold/"+tar_filename            # your apply file here
+        targetpath=r"/media/math/DATA/RESULT/RoseTTAFold/"+tar_filename    # your result folder here
         newline=apply.values.tolist()[0]
         newline.append(targetpath)
         
