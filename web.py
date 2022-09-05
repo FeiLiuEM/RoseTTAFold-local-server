@@ -32,7 +32,7 @@ class MyApp(App):
         self.input2=gui.Input(input_type='', default_value='')
         self.bt = gui.Button('提交')
         self.bt2 = gui.Button('查询结果')
-        self.download=gui.FileDownloader(text='',filename='/media/math/DATA/RESULT/CIRP.tar.gz')
+        self.download=gui.FileDownloader(text='',filename='/media/math/DATA/RESULT/CIRP.tar.gz')   #your result folder here
         self.lbl4 = gui.Label('引用文献：Fei Liu et.al, A chronotherapeutics-applicable multi-target therapeutics based on AI: the example of therapeutic hypothermia, Briefings in Bioinformatics, DOI:10.1093/bib/bbac365.')
 
         # setting the listener for the onclick event of the buttons
@@ -76,12 +76,12 @@ class MyApp(App):
             newline.append(ticks)
             newline.append(name)
             newline.append(x_char)
-            apply=pd.read_csv("/home/math/DATA/RoseTTAFold/apply.csv")
+            apply=pd.read_csv("/home/math/DATA/RoseTTAFold/apply.csv")                        # your query list here
             apply_list=apply.values.tolist()
             apply_list.append(newline)
             apply_new=pd.DataFrame(apply_list,columns=['Date', 'Project_code', 'Amino_acid_sequence'])
 
-            apply_new.to_csv("/home/math/DATA/RoseTTAFold/apply.csv",index=False,sep=',')
+            apply_new.to_csv("/home/math/DATA/RoseTTAFold/apply.csv",index=False,sep=',')     # your query list here
 
             #fa=[">test |"]
             #fa.append(x_char)
@@ -102,7 +102,7 @@ class MyApp(App):
         #self.lbl3.set_text('计算仍在进行中，请稍后。')
         #self.lbl3.set_text('计算已完成，请点击下方按钮下载数据：')
         else:
-            result=pd.read_csv("/home/math/DATA/RoseTTAFold/result.csv")
+            result=pd.read_csv("/home/math/DATA/RoseTTAFold/result.csv")                # your result list here
             if result.loc[result['Project_code'] == x2].values.tolist() != []:
                 self.download._filename=result.loc[result['Project_code'] == x2].values.tolist()[0][3]
                 self.lbl3.set_text('已完成计算，点击下方按钮下载结果，文件名正常情况下与项目名一致，文件名与项目名不一致时，说明此氨基酸链此前计算过。')
