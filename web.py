@@ -22,7 +22,7 @@ class MyApp(App):
         super(MyApp, self).__init__(*args)
 
     def main(self):
-        container = gui.VBox(width=720, height=600)
+        container = gui.VBox(width=720, height=650)
         #container.css_border_style=NoneType
         self.lbl_1 = gui.Label('浙医二院急诊科通用计算平台——RoseTTAFold蛋白质结构预测系统')
         self.lbl = gui.Label('请在下方文本框中输入氨基酸序列(氨基酸为单字母缩写形式)：')
@@ -33,7 +33,10 @@ class MyApp(App):
         self.bt = gui.Button('提交')
         self.bt2 = gui.Button('查询结果')
         self.download=gui.FileDownloader(text='',filename='/media/math/DATA/RESULT/CIRP.tar.gz')   #your result folder here
-        self.lbl4 = gui.Label('引用文献：Fei Liu et.al, A chronotherapeutics-applicable multi-target therapeutics based on AI: the example of therapeutic hypothermia, Briefings in Bioinformatics, DOI:10.1093/bib/bbac365.\nM. Baek, et al., Accurate prediction of protein structures and interactions using a three-track neural network, Science (2021). link\nI.R. Humphreys, J. Pei, M. Baek, A. Krishnakumar, et al, Computed structures of core eukaryotic protein complexes, Science (2021). link')
+        #self.lbl4 = gui.Label('引用文献：Fei Liu et.al, A chronotherapeutics-applicable multi-target therapeutics based on AI: the example of therapeutic hypothermia, Briefings in Bioinformatics, DOI:10.1093/bib/bbac365.')
+        self.lbl4 = gui.Label('引用文献：Fei Liu et.al, A chronotherapeutics-applicable multi-target therapeutics based on AI: the example of therapeutic hypothermia, Briefings in Bioinformatics, DOI:10.1093/bib/bbac365.')
+        self.lbl5 = gui.Label('M. Baek, et al., Accurate prediction of protein structures and interactions using a three-track neural network, Science (2021). ')
+        self.lbl6 = gui.Label('I.R. Humphreys, J. Pei, M. Baek, A. Krishnakumar, et al, Computed structures of core eukaryotic protein complexes, Science (2021).')
 
         # setting the listener for the onclick event of the buttons
         self.bt.onclick.do(self.on_button_pressed)
@@ -52,6 +55,8 @@ class MyApp(App):
         container.append(self.lbl3)
         container.append(self.download)   
         container.append(self.lbl4)
+        container.append(self.lbl5)
+        container.append(self.lbl6)
         
         # returning the root widget
         return container
