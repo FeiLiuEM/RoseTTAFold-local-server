@@ -29,4 +29,4 @@ Fei Liu et.al, A chronotherapeutics-applicable multi-target therapeutics based o
 
 # Screenshot
 
-![Screenshot](Screenshot.png)
+![Screenshot](Figure/Screenshot.png)
