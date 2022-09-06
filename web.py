@@ -33,7 +33,7 @@ class MyApp(App):
         self.bt = gui.Button('提交')
         self.bt2 = gui.Button('查询结果')
         self.download=gui.FileDownloader(text='',filename='/media/math/DATA/RESULT/CIRP.tar.gz')   #your result folder here
-        self.lbl4 = gui.Label('引用文献：Fei Liu et.al, A chronotherapeutics-applicable multi-target therapeutics based on AI: the example of therapeutic hypothermia, Briefings in Bioinformatics, DOI:10.1093/bib/bbac365.')
+        self.lbl4 = gui.Label('引用文献：Fei Liu et.al, A chronotherapeutics-applicable multi-target therapeutics based on AI: the example of therapeutic hypothermia, Briefings in Bioinformatics, DOI:10.1093/bib/bbac365.\nM. Baek, et al., Accurate prediction of protein structures and interactions using a three-track neural network, Science (2021). link\nI.R. Humphreys, J. Pei, M. Baek, A. Krishnakumar, et al, Computed structures of core eukaryotic protein complexes, Science (2021). link')
 
         # setting the listener for the onclick event of the buttons
         self.bt.onclick.do(self.on_button_pressed)
