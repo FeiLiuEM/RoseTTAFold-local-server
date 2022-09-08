@@ -32,4 +32,4 @@ I.R. Humphreys, J. Pei, M. Baek, A. Krishnakumar, et al, Computed structures of 
 
 # Screenshot
 
-![Screenshot](Figure/Screenshot.png)
+![Screenshot](Figure/Screenshot1.png)
