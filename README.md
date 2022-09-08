@@ -1,6 +1,6 @@
 # RoseTTAFold-local-server
 
-It is a simple local server of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold) based on python and ubuntu 20.04. Change the file path in the code before running it.
+It is a simple local server of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold). Ubuntu ≥ 20.04 is recommended. Remember change the folder path in the code before running it.
 
 
 ## Requirement:
