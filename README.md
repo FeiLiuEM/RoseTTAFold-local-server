@@ -23,7 +23,7 @@ There are three files:
 
 ## Citing this work
 
-Fei Liu et.al, A chronotherapeutics-applicable multi-target therapeutics based on AI: the example of therapeutic hypothermia, Briefings in Bioinformatics (2022), DOI:10.1093/bib/bbac365.
+Fei Liu, Xiangkang Jiang, Jingyuan Yang, Jiawei Tao, Mao Zhang, A chronotherapeutics-applicable multi-target therapeutics based on AI: Example of therapeutic hypothermia, Briefings in Bioinformatics, 2022;, bbac365, https://doi.org/10.1093/bib/bbac365
 
 M. Baek, et al., Accurate prediction of protein structures and interactions using a three-track neural network, Science (2021). 
 
