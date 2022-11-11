@@ -68,7 +68,7 @@ class MyApp(App):
         x_char = cop.sub('', x)
         x_char=x_char.upper()
 
-        if len(x_char) < 20:
+        if len(x_char) < 20 and x_char[0]!="M":
             widget.set_text('请输入正确的氨基酸序列!')
             self.input.set_value('')
         else:
