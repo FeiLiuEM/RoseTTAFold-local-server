@@ -76,7 +76,7 @@ class MyApp(App):
             self.input.set_value(x_char)
             name = random.choice(s) + random.choice(s) + random.choice(s) + random.choice(s) + random.choice(s) + random.choice(s) + random.choice(s) + random.choice(s) + random.choice(s) + random.choice(s)  #生成十位的随机字母
             self.input2.set_value(name)
-            ticks = time.time()
+            ticks = time.strftime('%Y-%m-%d-%H-%M-%S',time.localtime(time.time()))
             newline=[]
             newline.append(ticks)
             newline.append(name)
