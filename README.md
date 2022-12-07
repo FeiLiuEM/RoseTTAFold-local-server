@@ -16,7 +16,7 @@ You can install from requirement file:
 
 `conda install --yes --file requirements.txt`
 
-Or, you can also install the environment by conda command:
+Or, you can also create the environment by conda command:
 
 `conda env create -f RFlocalserver.yaml`
 
