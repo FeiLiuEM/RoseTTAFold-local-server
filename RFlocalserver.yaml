@@ -1,4 +1,4 @@
-name: RSlocalserver
+name: RFlocalserver
 channels:
   - conda-forge
   - defaults
