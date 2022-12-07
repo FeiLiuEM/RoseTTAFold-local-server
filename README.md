@@ -23,7 +23,7 @@ There are 2 parts: codes and running data.
 
 `apply.sh` The running file. It will execute the RoseTTAFold run command and place the completed file in a specific location.
 
-### Running data include 3 files and 1 folder:
+### Running data includes 3 files and 1 folder:
 
 `running` folder include the calculating amino acid chain. After calculating, all the files in the folder will be compressed and move to specific folder.
 
