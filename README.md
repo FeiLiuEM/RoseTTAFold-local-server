@@ -11,23 +11,28 @@ python = 3.8.10
 pandas
 remi
 ```
+
 You can install from requirement file:
+
 `conda install --yes --file requirements.txt`
 
 Or, you can also install the environment by conda command:
+
 `conda env create -f environment.yaml`
 
 Then
+
 `conda activate RFlocalserver`
 
 Lastly, set up the server:
+
 `python web.py`
 
 It's important to note that, `background_service.py` need RoseTTAFold environment:
 ```shell
 conda activate RoseTTAFold
 python background_service.py`
-
+```
 
 ## Context:
 
