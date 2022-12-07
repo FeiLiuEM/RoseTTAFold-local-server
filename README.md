@@ -5,9 +5,9 @@ It is a simple local server of [RoseTTAFold](https://github.com/RosettaCommons/R
 
 ## Environment:
 
-The environment required `pandas` and `remi`. We recommend conda.
+The environment required `pandas` and `remi` based on python3. We recommend conda environment.
+
 ```
-python = 3.8.10
 pandas
 remi
 ```
@@ -26,12 +26,12 @@ Then
 
 Lastly, set up the server:
 
-`python web.py`
+`python Code/web.py`
 
-It's important to note that, `background_service.py` need RoseTTAFold environment:
+It's important to note that, `background_service.py` need [RoseTTAFold environment](https://github.com/RosettaCommons/RoseTTAFold):
 ```shell
 conda activate RoseTTAFold
-python background_service.py`
+python Code/background_service.py`
 ```
 
 ## Context:
@@ -44,7 +44,7 @@ There are 2 parts: codes and running data.
 
 `background_server.py`: The background running program of the server.  When `apply.csv` is not empty, it will create the run indicator file `test.fa` and start calculation. When finish indicator file `model5.pdb` exist, it will shear the imformation from `apply.csv` to `result.csv`. The results will be  compressed into a `tar.gz` file and transferred to the `result` folder for `web.py` retrieval. Remember activate `RoseTTAFold` environment of conda before running it. The environment could refer to the github of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold).
 
-`apply.sh` The running file. It will execute the RoseTTAFold run command and place the completed file in a specific location.
+`apply.sh` The running file. It will execute the RoseTTAFold run command and place the completed file in a specific location. We prefer pyrosetta than e2e.
 
 ### Running data includes 3 files and 1 folder:
 
