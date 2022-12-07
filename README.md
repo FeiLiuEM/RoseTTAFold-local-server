@@ -15,7 +15,7 @@ remi
 
 There are 2 parts: codes and running data.
 
-### Codes include three files:
+### Codes include 3 files:
 
 `web.py`: The website of the server. It will receive the amino acid sequence and write to `apply.csv`. The conda or python environment need `remi` library.
 
