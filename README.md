@@ -15,7 +15,7 @@ remi
 
 There are 2 parts: codes and running data.
 
-Codes include three files:
+### Codes include three files:
 
 `web.py`: The website of the server. It will receive the amino acid sequence and write to `apply.csv`. The conda or python environment need `remi` library.
 
@@ -23,7 +23,7 @@ Codes include three files:
 
 `apply.sh` The running file. It will execute the RoseTTAFold run command and place the completed file in a specific location.
 
-Running data include 3 files and 1 folder:
+### Running data include 3 files and 1 folder:
 
 `running` folder include the calculating amino acid chain. After calculating, all the files in the folder will be compressed and move to specific folder.
 
