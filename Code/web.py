@@ -38,12 +38,24 @@ class MyApp(App):
         #self.lbl_1.style['height'] = '100%'
         #self.lbl_1.style['display'] = 'inline-block'
         #self.lbl_1.style['vertical-align'] = 'middle'
-        self.lbl_2 = gui.Label('近期服务器排队任务较多（8000+），若急需计算联系刘飞（feiliuem@outlook.com）')
+        self.lbl_2 = gui.Label('近期服务器排队任务较多（8000+），若急需计算可联系刘飞（feiliuem@outlook.com）')
         self.lbl_2.style['color'] = 'red'
         self.lbl = gui.Label('请在下方文本框中输入氨基酸序列(氨基酸为单字母缩写形式)：')
         self.lbl2 = gui.Label('您的项目代号为：')
         self.lbl3 = gui.Label('')
         self.input=gui.Input(input_type='', default_value='',width=200, height=100)
+        self.input.style['font-size'] = '20px'
+        #self.input.style['font-weight'] = 'bold'
+        self.input.style['color'] = 'black'
+        #self.input.style['text-align'] = 'left'
+        self.input.style['margin'] = '10px'
+        self.input.style['padding'] = '10px'
+        #self.input.style['background-color'] = 'white'
+        self.input.style['border-radius'] = '10px'
+        self.input.style['border'] = '1px solid black'
+        self.input.style['width'] = '432px'
+        #self.input.style['max-width'] = '432px'
+
         self.input2=gui.Input(input_type='', default_value='')
         self.bt = gui.Button('提交')
         self.bt2 = gui.Button('查询结果')
