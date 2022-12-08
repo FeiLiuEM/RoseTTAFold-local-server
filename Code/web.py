@@ -32,7 +32,7 @@ class MyApp(App):
         self.input2=gui.Input(input_type='', default_value='')
         self.bt = gui.Button('提交')
         self.bt2 = gui.Button('查询结果')
-        self.download=gui.FileDownloader(text='',filename='/media/math/DATA/RESULT/CIRP.tar.gz')   #your result folder here
+        self.download=gui.FileDownloader(text='',filename='RESULT/CIRP.tar.gz')   #your result folder here
         #self.lbl4 = gui.Label('引用文献：Fei Liu et.al, A chronotherapeutics-applicable multi-target therapeutics based on AI: the example of therapeutic hypothermia, Briefings in Bioinformatics, DOI:10.1093/bib/bbac365.')
         self.lbl4 = gui.Label('引用文献：Liu F, Jiang X, Yang J, Tao J, Zhang M. A chronotherapeutics-applicable multi-target therapeutics based on AI: Example of therapeutic hypothermia. Brief Bioinform (2022).')
         self.lbl5 = gui.Label('M. Baek, et al., Accurate prediction of protein structures and interactions using a three-track neural network, Science (2021). ')
@@ -81,17 +81,17 @@ class MyApp(App):
             newline.append(ticks)
             newline.append(name)
             newline.append(x_char)
-            apply=pd.read_csv("/home/math/DATA/RoseTTAFold/apply.csv")                        # your query list here
+            apply=pd.read_csv("RunningData/apply.csv")                        # your query list here
             apply_list=apply.values.tolist()
             apply_list.append(newline)
             apply_new=pd.DataFrame(apply_list,columns=['Date', 'Project_code', 'Amino_acid_sequence'])
 
-            apply_new.to_csv("/home/math/DATA/RoseTTAFold/apply.csv",index=False,sep=',')     # your query list here
+            apply_new.to_csv("RunningData/apply.csv",index=False,sep=',')     # your query list here
 
             #fa=[">test |"]
             #fa.append(x_char)
             #写入fa文件
-            #f = open("/home/math/DATA/RoseTTAFold/running/test.fa","w",encoding='utf-8')
+            #f = open("RunningData/running/test.fa","w",encoding='utf-8')
 
             #for line in code0:
             #    f.write(line+'\n')
@@ -107,7 +107,7 @@ class MyApp(App):
         #self.lbl3.set_text('计算仍在进行中，请稍后。')
         #self.lbl3.set_text('计算已完成，请点击下方按钮下载数据：')
         else:
-            result=pd.read_csv("/home/math/DATA/RoseTTAFold/result.csv")                # your result list here
+            result=pd.read_csv("RunningData/result.csv")                # your result list here
             if result.loc[result['Project_code'] == x2].values.tolist() != []:
                 self.download._filename=result.loc[result['Project_code'] == x2].values.tolist()[0][3]
                 self.lbl3.set_text('已完成计算，点击下方按钮下载结果，文件名正常情况下与项目名一致，文件名与项目名不一致时，说明此氨基酸链此前计算过。')
