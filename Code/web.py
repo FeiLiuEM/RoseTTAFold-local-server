@@ -25,6 +25,21 @@ class MyApp(App):
         container = gui.VBox(width=720, height=650)
         #container.css_border_style=NoneType
         self.lbl_1 = gui.Label('浙医二院急诊科通用计算平台——RoseTTAFold蛋白质结构预测系统')
+        self.lbl_1.style['font-size'] = '20px'
+        self.lbl_1.style['font-weight'] = 'bold'
+        self.lbl_1.style['color'] = 'black'
+        self.lbl_1.style['text-align'] = 'center'
+        #self.lbl_1.style['margin'] = '10px'
+        #self.lbl_1.style['padding'] = '10px'
+        #self.lbl_1.style['background-color'] = 'yellow'
+        #self.lbl_1.style['border-radius'] = '10px'
+        #self.lbl_1.style['border'] = '1px solid black'
+        #self.lbl_1.style['width'] = '100%'
+        #self.lbl_1.style['height'] = '100%'
+        #self.lbl_1.style['display'] = 'inline-block'
+        #self.lbl_1.style['vertical-align'] = 'middle'
+        self.lbl_2 = gui.Label('近期服务器排队任务较多（8000+），若急需计算联系刘飞（feiliuem@outlook.com）')
+        self.lbl_2.style['color'] = 'red'
         self.lbl = gui.Label('请在下方文本框中输入氨基酸序列(氨基酸为单字母缩写形式)：')
         self.lbl2 = gui.Label('您的项目代号为：')
         self.lbl3 = gui.Label('')
@@ -32,7 +47,7 @@ class MyApp(App):
         self.input2=gui.Input(input_type='', default_value='')
         self.bt = gui.Button('提交')
         self.bt2 = gui.Button('查询结果')
-        self.download=gui.FileDownloader(text='',filename='RESULT/CIRP.tar.gz')   #your result folder here
+        self.download=gui.FileDownloader(text='',filename='/media/math/DATA/RESULT/CIRP.tar.gz')   #your result folder here
         #self.lbl4 = gui.Label('引用文献：Fei Liu et.al, A chronotherapeutics-applicable multi-target therapeutics based on AI: the example of therapeutic hypothermia, Briefings in Bioinformatics, DOI:10.1093/bib/bbac365.')
         self.lbl4 = gui.Label('引用文献：Liu F, Jiang X, Yang J, Tao J, Zhang M. A chronotherapeutics-applicable multi-target therapeutics based on AI: Example of therapeutic hypothermia. Brief Bioinform (2022).')
         self.lbl5 = gui.Label('M. Baek, et al., Accurate prediction of protein structures and interactions using a three-track neural network, Science (2021). ')
@@ -46,6 +61,7 @@ class MyApp(App):
 
         # appending a widget to another
         container.append(self.lbl_1)
+        container.append(self.lbl_2)
         container.append(self.lbl)
         container.append(self.input)
         container.append(self.bt)
@@ -68,7 +84,7 @@ class MyApp(App):
         x_char = cop.sub('', x)
         x_char=x_char.upper()
 
-        if len(x_char) < 20 or (x_char[0]!="M" and x_char[0]!="E" ):
+        if len(x_char) < 20 or (x_char[0]!="M" and x_char[0]!= "E"):
             widget.set_text('请输入正确的氨基酸序列!')
             self.input.set_value('')
         else:
@@ -81,17 +97,17 @@ class MyApp(App):
             newline.append(ticks)
             newline.append(name)
             newline.append(x_char)
-            apply=pd.read_csv("RunningData/apply.csv")                        # your query list here
+            apply=pd.read_csv("/home/math/DATA/RoseTTAFold/apply.csv")                        # your query list here
             apply_list=apply.values.tolist()
             apply_list.append(newline)
             apply_new=pd.DataFrame(apply_list,columns=['Date', 'Project_code', 'Amino_acid_sequence'])
 
-            apply_new.to_csv("RunningData/apply.csv",index=False,sep=',')     # your query list here
+            apply_new.to_csv("/home/math/DATA/RoseTTAFold/apply.csv",index=False,sep=',')     # your query list here
 
             #fa=[">test |"]
             #fa.append(x_char)
             #写入fa文件
-            #f = open("RunningData/running/test.fa","w",encoding='utf-8')
+            #f = open("/home/math/DATA/RoseTTAFold/running/test.fa","w",encoding='utf-8')
 
             #for line in code0:
             #    f.write(line+'\n')
@@ -107,7 +123,7 @@ class MyApp(App):
         #self.lbl3.set_text('计算仍在进行中，请稍后。')
         #self.lbl3.set_text('计算已完成，请点击下方按钮下载数据：')
         else:
-            result=pd.read_csv("RunningData/result.csv")                # your result list here
+            result=pd.read_csv("/home/math/DATA/RoseTTAFold/result.csv")                # your result list here
             if result.loc[result['Project_code'] == x2].values.tolist() != []:
                 self.download._filename=result.loc[result['Project_code'] == x2].values.tolist()[0][3]
                 self.lbl3.set_text('已完成计算，点击下方按钮下载结果，文件名正常情况下与项目名一致，文件名与项目名不一致时，说明此氨基酸链此前计算过。')
