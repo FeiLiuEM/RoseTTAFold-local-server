@@ -5,12 +5,13 @@ It is a simple local server of [RoseTTAFold](https://github.com/RosettaCommons/R
 
 ## Environment:
 
-The environment required `pandas` and `remi` based on python3. We recommend conda environment.
-
 ```
 pandas
 remi
 ```
+
+The environment required `pandas` and `remi` based on python3. We recommend conda environment of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold). Just install `remi` by `conda install -c conda-forge remi`. Then `python Code/web.py`. The server is start in `http://localhost:46429`.
+
 
 You can install from requirement file:
 
@@ -40,19 +41,19 @@ There are 2 parts: codes and running data.
 
 ### Codes include 3 files:
 
-`web.py`: The website of the server. It will receive the amino acid sequence and write to `apply.csv`. The conda or python environment need `remi` library.
+`Code/web.py`: The website of the server. It will receive the amino acid sequence and write to `apply.csv`. The conda or python environment need `remi` library.
 
-`background_server.py`: The background running program of the server.  When `apply.csv` is not empty, it will create the run indicator file `test.fa` and start calculation. When finish indicator file `model5.pdb` exist, it will shear the imformation from `apply.csv` to `result.csv`. The results will be  compressed into a `tar.gz` file and transferred to the `result` folder for `web.py` retrieval. Remember activate `RoseTTAFold` environment of conda before running it. The environment could refer to the github of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold).
+`Code/background_server.py`: The background running program of the server.  When `apply.csv` is not empty, it will create the run indicator file `test.fa` and start calculation. When finish indicator file `model5.pdb` exist, it will shear the imformation from `apply.csv` to `result.csv`. The results will be  compressed into a `tar.gz` file and transferred to the `result` folder for `web.py` retrieval. Remember activate `RoseTTAFold` environment of conda before running it. The environment could refer to the github of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold).
 
-`apply.sh` The running file. It will execute the RoseTTAFold run command and place the completed file in a specific location. We prefer pyrosetta than e2e.
+`Code/apply.sh` The running file. It will execute the RoseTTAFold run command and place the completed file in a specific location. We prefer pyrosetta than e2e.
 
 ### Running data includes 3 files and 1 folder:
 
-`running` folder include the calculating amino acid chain. After calculating, all the files in the folder will be compressed and move to specific folder.
+`RunningData/running` folder include the calculating amino acid chain. After calculating, all the files in the folder will be compressed and move to specific folder.
 
-`apply.csv` includes the applied mission from web. When calculation finishes, the first line would be move to `result.csv`.
+`RunningData/apply.csv` includes the applied mission from web. When calculation finishes, the first line would be move to `result.csv`.
 
-`result.csv` records completed calculations. It includes the position of compressed file in specific folder.
+`RunningData/result.csv` records completed calculations. It includes the position of compressed file in specific folder.
 
 ## Citing this work
 
