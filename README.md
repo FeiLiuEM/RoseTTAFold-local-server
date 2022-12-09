@@ -10,7 +10,7 @@ pandas
 remi
 ```
 
-The environment required `pandas` and `remi` based on python3. We recommend conda environment of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold). Just install `remi` by `conda install -c conda-forge remi`. Then `python Code/web.py`. The server is start in `http://localhost:46429`.
+The environment required `pandas` and `remi` based on python3. We recommend conda environment of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold). Just need install `remi` by `conda install -c conda-forge remi`. Then `conda activate RoseTTAFold` and `python Code/web.py`. The server is start in `http://0.0.0.0:46429`.
 
 
 You can install from requirement file:
