@@ -63,6 +63,9 @@ M. Baek, et al., Accurate prediction of protein structures and interactions usin
 
 I.R. Humphreys, J. Pei, M. Baek, A. Krishnakumar, et al, Computed structures of core eukaryotic protein complexes, Science (2021). 
 
+## License
+
+The license of the project is MPL-2.0.
 
 ## Screenshot
 
