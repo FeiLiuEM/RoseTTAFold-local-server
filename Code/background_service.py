@@ -98,8 +98,9 @@ while True:
                 for line in fa:
                     f.write(line+'\n')
                 f.close()
-
-                os.system("cd Code;./apply.sh")   #运行计算程序
+                
+                os.system('/bin/bash -c "source ~/miniconda3/etc/profile.d/conda.sh && conda activate RoseTTAFold && cd Code && ./apply.sh"')
+                #os.system("cd Code;./apply.sh")   #运行计算程序
                 notification = "正在运行 "+apply.values.tolist()[0][1]
                 print(notification)
 
