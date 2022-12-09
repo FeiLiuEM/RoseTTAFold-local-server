@@ -43,7 +43,7 @@ class MyApp(App):
         self.lbl = gui.Label('请在下方文本框中输入氨基酸序列(氨基酸为单字母缩写形式)：')
         self.lbl2 = gui.Label('您的项目代号为：')
         self.lbl3 = gui.Label('')
-        self.input=gui.Input(input_type='', default_value='',width=200, height=100)
+        self.input=gui.TextInput(input_type='', default_value='',width=200, height=100)
         self.input.style['font-size'] = '20px'
         #self.input.style['font-weight'] = 'bold'
         self.input.style['color'] = 'black'
@@ -57,8 +57,8 @@ class MyApp(App):
         #self.input.style['max-width'] = '432px'
 
         self.input2=gui.Input(input_type='', default_value='')
-        self.bt = gui.Button('提交')
-        self.bt2 = gui.Button('查询结果')
+        self.bt = gui.Button('提交氨基酸序列')
+        self.bt2 = gui.Button('查询计算结果')
         self.download=gui.FileDownloader(text='',filename='/media/math/DATA/RESULT/CIRP.tar.gz')   #your result folder here
         #self.lbl4 = gui.Label('引用文献：Fei Liu et.al, A chronotherapeutics-applicable multi-target therapeutics based on AI: the example of therapeutic hypothermia, Briefings in Bioinformatics, DOI:10.1093/bib/bbac365.')
         self.lbl4 = gui.Label('引用文献：Liu F, Jiang X, Yang J, Tao J, Zhang M. A chronotherapeutics-applicable multi-target therapeutics based on AI: Example of therapeutic hypothermia. Brief Bioinform (2022).')
