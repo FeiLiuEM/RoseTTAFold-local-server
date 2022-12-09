@@ -43,7 +43,7 @@ class MyApp(App):
         self.lbl = gui.Label('请在下方文本框中输入氨基酸序列(氨基酸为单字母缩写形式)：')
         self.lbl2 = gui.Label('您的项目代号为：')
         self.lbl3 = gui.Label('')
-        self.input=gui.TextInput(input_type='', default_value='',width=200, height=100)
+        self.input=gui.TextInput(input_type='', default_value='', height=100)
         self.input.style['font-size'] = '20px'
         #self.input.style['font-weight'] = 'bold'
         self.input.style['color'] = 'black'
