@@ -6,6 +6,7 @@ It is a simple local server of [RoseTTAFold](https://github.com/RosettaCommons/R
 ## Environment:
 
 ```
+python = 3.8.10
 pandas
 remi
 ```
