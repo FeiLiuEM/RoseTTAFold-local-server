@@ -1,6 +1,6 @@
 # RoseTTAFold-local-server
 
-It is a simple local server of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold). Ubuntu ≥ 20.04 is recommended. Remember change the folder path in the code before running it.
+It is a simple local server of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold) or [RoseTTAFold2](https://github.com/uw-ipd/RoseTTAFold2). Ubuntu ≥ 20.04 is recommended. Remember change the folder path in the code before running it.
 
 
 ## Environment:
@@ -11,7 +11,7 @@ pandas
 remi
 ```
 
-The environment required `pandas` and `remi` based on python3. We recommend conda environment of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold). Just need install `remi` by `conda install -c conda-forge remi`. Then `conda activate RoseTTAFold` and `python Code/web.py`. The server is start in `http://0.0.0.0:46429`.
+The environment required `pandas` and `remi` based on python3. We recommend conda environment of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold) or [RoseTTAFold2](https://github.com/uw-ipd/RoseTTAFold2). Just need install `remi` by `conda install -c conda-forge remi`. Then `conda activate RoseTTAFold` or `conda activate RF2` and `python Code/web.py`. The server is start in `http://0.0.0.0:46429`.
 
 
 You can install from requirement file:
