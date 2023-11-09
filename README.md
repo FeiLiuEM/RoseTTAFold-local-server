@@ -16,15 +16,24 @@ The environment required `pandas` and `remi` based on python3. We recommend cond
 
 You can install from requirement file:
 
-`conda install --yes --file requirements.txt`
+```
+conda install --yes --file RF_requirements.txt`  # RoseTTAFold
+conda install --yes --file RF2_requirements.txt`  # RoseTTAFold2
+```
 
 Or, you can also create the environment by conda command:
 
-`conda env create -f RFlocalserver.yaml`
+```
+conda env create -f RF_environment.yaml  # RoseTTAFold
+conda env create -f RF2_environment.yaml  # RoseTTAFold2
+```
 
 Then
 
-`conda activate RFlocalserver`
+```
+conda activate RFlocalserver # RoseTTAFold
+conda activate RF2 # RoseTTAFold2
+```
 
 Lastly, set up the server:
 
@@ -32,7 +41,8 @@ Lastly, set up the server:
 
 It's important to note that, `background_service.py` need [RoseTTAFold environment](https://github.com/RosettaCommons/RoseTTAFold):
 ```shell
-conda activate RoseTTAFold
+conda activate RoseTTAFold # RoseTTAFold
+conda activate RF2         # RoseTTAFold2
 python Code/background_service.py`
 ```
 
