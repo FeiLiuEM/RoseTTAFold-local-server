@@ -17,14 +17,14 @@ The environment required `pandas` and `remi` based on python3. We recommend cond
 You can install from requirement file:
 
 ```
-conda install --yes --file RF_requirements.txt`  # RoseTTAFold
+conda install --yes --file RF_requirements.txt`   # RoseTTAFold
 conda install --yes --file RF2_requirements.txt`  # RoseTTAFold2
 ```
 
 Or, you can also create the environment by conda command:
 
 ```
-conda env create -f RF_environment.yaml  # RoseTTAFold
+conda env create -f RF_environment.yaml   # RoseTTAFold
 conda env create -f RF2_environment.yaml  # RoseTTAFold2
 ```
 
@@ -32,7 +32,7 @@ Then
 
 ```
 conda activate RFlocalserver # RoseTTAFold
-conda activate RF2 # RoseTTAFold2
+conda activate RF2           # RoseTTAFold2
 ```
 
 Lastly, set up the server:
@@ -54,9 +54,13 @@ There are 2 parts: codes and running data.
 
 `Code/web.py`: The website of the server. It will receive the amino acid sequence and write to `apply.csv`. The conda or python environment need `remi` library.
 
-`Code/background_server.py`: The background running program of the server.  When `apply.csv` is not empty, it will create the run indicator file `test.fa` and start calculation. When finish indicator file `model5.pdb` exist, it will shear the imformation from `apply.csv` to `result.csv`. The results will be  compressed into a `tar.gz` file and transferred to the `result` folder for `web.py` retrieval. Remember activate `RoseTTAFold` environment of conda before running it. The environment could refer to the github of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold).
+`Code/background_server.py`: The background running program of the server of RoseTTAFold.  When `apply.csv` is not empty, it will create the run indicator file `test.fa` and start calculation. When finish indicator file `model5.pdb` exist, it will shear the imformation from `apply.csv` to `result.csv`. The results will be  compressed into a `tar.gz` file and transferred to the `result` folder for `web.py` retrieval. Remember activate `RoseTTAFold` environment of conda before running it. The environment could refer to the github of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold).
 
-`Code/apply.sh` The running file. It will execute the RoseTTAFold run command and place the completed file in a specific location. We prefer pyrosetta than e2e.
+`Code/background_server_rf2.py`: The background running program of the server of RoseTTAFold2.  When `apply.csv` is not empty, it will create the run indicator file `test.fa` and start calculation. When finish indicator file `model5.pdb` exist, it will shear the imformation from `apply.csv` to `result.csv`. The results will be  compressed into a `tar.gz` file and transferred to the `result` folder for `web.py` retrieval. Remember activate `RoseTTAFold` environment of conda before running it. The environment could refer to the github of [RoseTTAFold](https://github.com/RosettaCommons/RoseTTAFold).
+
+`Code/apply.sh` The running file of RoseTTAFold. It will execute the RoseTTAFold run command and place the completed file in a specific location. We prefer pyrosetta than e2e.
+
+`Code/apply_rf2.sh` The running file of RoseTTAFold2. It will execute the RoseTTAFold run command and place the completed file in a specific location. We prefer pyrosetta than e2e.
 
 ### Running data includes 3 files and 1 folder:
 
