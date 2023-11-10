@@ -49,7 +49,7 @@ while True:
 
 
         #创建结果压缩包，移动到新文件夹中，并且初始化运行文件夹。
-        os.system(r'cp /home/math/DATA/RoseTTAFold/running/model/model_00_pred.pdb /media/math/DATA/RESULT/RoseTTAFold/pdb/'+str(apply.values.tolist()[0][1])+'.pdb')
+        os.system(r'cp /home/math/DATA/RoseTTAFold/running/models/model_00_pred.pdb /media/math/DATA/RESULT/RoseTTAFold/pdb/'+str(apply.values.tolist()[0][1])+'.pdb')
         instruction=r"cd /home/math/DATA/RoseTTAFold ;tar -zcvf "+tar_filename  +r" /home/math/DATA/RoseTTAFold/running ;mv " + resultpath +r" /media/math/DATA/RESULT/RoseTTAFold"
         os.system(instruction)
         os.system(r"rm -rf /home/math/DATA/RoseTTAFold/running")
